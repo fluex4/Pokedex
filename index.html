@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="nav"><h1 class="title">Pokedex </h1><div id="iconn"></div></div>
+        <div class="search">    
+        <div class="search-bar  " id ="bar">
+        <input type="text" class="input " id="in">
+        <select name="type" id="select">
+            <option value="pokemon">Pokemon</option>
+            <option value="berry">Berries</option>
+            <option value="item">Items</option>
+            <option value="locations">Locations</option>
+            <option value="move">Moves</option>
+        </select> 
+        <button onclick="get()" style=" height: 80%;  ">
+            <img src="pikachu-running.gif" alt="Get" style="height: 100%; cursor: pointer; ">
+        </button>
+    </div>
+    </div>   
+    <div class="card">
+        <div class="profile"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="" id="pfp"><h2 id="name">Gengar</h2></div>
+        <div id="stats"> 
+            <div id="detail">
+                Type: <span id="type" class="ghost">Normal</span> <br>height:10 <br>weight:3 <br>
+                order: 33 
+            </div>
+            <hr id="divide">
+            <div id="ability">
+                <ul>1</ul>
+                <ul>2</ul>
+                <ul>3</ul>
+                <ul>4</ul>
+            </div>
+            <hr id="divide">
+            <div id="moves">
+                <ul>
+                    <li>q</li>
+                    <li>w</li>
+                    <li>e</li>
+                    <li>r</li>
+                    <li>r</li>
+                    <li>r</li>
+                    <li>r</li>
+ 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="stats">
+        <h1>hi</h1>
+    </div>
+    <script>
+        get=()=>{
+            let data;
+            const name=document.getElementById("in").value;
+            const select = document.getElementById("select").value;
+            const bar = document.getElementById("bar");
+            const url=`https://pokeapi.co/api/v2/${select}/${name}`;
+            if(name==""||name==" "){
+                bar.classList.add("req");
+                setInterval(()=>{
+                    bar.classList.remove("req");
+                },800);
+                console.log("eee")
+            }
+            else{
+                fetch(url)
+                    .then(response=>{
+                        return response.json();
+                     })
+                        .then(data=>{
+                            displayData(data);
+                         })
+            }
+    }
+    displayData=(data)=>{
+        console.log(data.sprites['front_default']);
+
+    }
+      </script>
+</body>
+</html>
