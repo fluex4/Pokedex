@@ -123,3 +123,6 @@ displayList=()=>{
             er.innerText=`Status:${err.status}  No Such Pokemon found `
          });
 }
+displayList=()=>{
+    alert("not added yet,add figure out soon");
+}
