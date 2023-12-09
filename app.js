@@ -168,6 +168,7 @@ displayList=()=>{
             if(err.status==404)
             er.innerText=`Status:${err.status}  No Such Pokemon found `
          });
+<<<<<<< HEAD
          function display(str){
             document.getElementById("inpt").value=str;
         }
@@ -180,3 +181,9 @@ checkerr=(id)=>{
     }
 
 }
+=======
+}
+displayList=()=>{
+    alert("not added yet,add figure out soon");
+}
+>>>>>>> 1b0d1c75ea66d7c8d92bb8b3a3b7cbda41720c96
