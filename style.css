@@ -17,9 +17,10 @@ body{
   height: 100vh;  
   width: 98vw;
   background-color: rgb(0, 0, 0);    
-  background-image: url("4167709.gif");
+  background-image: url("mybg.png");
   background-size:cover;
   background-repeat: no-repeat;
+  background-position: center 10px;
 }
 .nav{
   height: 15%;
@@ -30,6 +31,7 @@ body{
   backdrop-filter: brightness(10%);
   min-height: 40px;
   max-height: 90px;
+
 }
 h1,h2{
   font-family: "Press Start 2P";
@@ -39,15 +41,12 @@ h1,h2{
   animation: color 1s ease infinite alternate  ;
 }
 @keyframes color {
-  from {text-shadow: 4px 4px 1px rgb(253, 64, 64);}
-  to {text-shadow: 4px 4px 1px rgb(57, 193, 247);}
+  from {text-shadow: 5px 5px 3px rgb(253, 64, 64);}
+  to {text-shadow: 5px 5px 3  px rgb(57, 193, 247);}
   
 }
 h4{
-  margin-top: 10px;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-
+  margin-top: 2%;
 }
 #iconn{
   background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png");
@@ -57,33 +56,27 @@ h4{
   background-size: contain;
 }
 
-@media screen and (max-width: 1200px) {
-  body {
-    background-color: black;
-  }
-  .hero{
-      background-position-x:-200px ;
-  }
-}
+
 .search{
 
   height: 30%;
- width:100% ;
+ width:100vw ;
   display: flex;
   justify-content: center;
   align-items: center   ;
-  backdrop-filter: brightness(16%);
-  min-height: 35px;
+
+  min-height: 45px;
   max-height: 55px;
-  /* background-color: rgba(245, 222, 179, 0.374); */
+ /* background-color: rgba(229, 232, 237, 0.458);  */
   padding: 10px ;
-  border-radius: 15px;
+  border-radius: 7px;
   backdrop-filter: blur(10px) brightness(60%);
+
   
 }
 @keyframes color1 {
-  from {box-shadow: 5px 5px 1px rgba(253, 64, 64, 0.7);}
-  to {box-shadow: 5px 5px 1px rgba(57, 193, 247, 0.748);}
+  from {box-shadow: 1px 1px 1px rgba(253, 64, 64, 0.7);}
+  to {box-shadow: 1px 1px 1px rgba(57, 193, 247, 0.748);}
   
 }
 .search-bar{
@@ -91,6 +84,7 @@ h4{
   padding: 0;
   height: 100%;
   display: flex;
+  min-width: 300px;
   align-items: center;
   justify-content: center;
   border-top: 3px solid red;
@@ -100,23 +94,43 @@ h4{
   display: inline-block;
   width: 100%;
   height: 80%;
+  min-width: 120px;
   width: auto;
   border: none;
-  background-color: white;
+  background-color: rgb(244, 73, 73);
   color: black;
+  text-align: center;
+  
 }
 select{
   height: 80%;
+  min-width: 75px;
   border: none;
+  color: black        ; 
+  background-color: rgb(244, 73, 73);
+}
+button{
+  height: 80%; 
+  border: none;
+  background-color: rgb(88, 217, 250);
+  min-width: 85px;
+  cursor: pointer;
+  background-image: url("pikachu-running.gif");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: left;
+  padding-left: 4px;
   color: black        ;
-  
 }
 option{
-  color: black        ;
+  color: black;
+  background-color: rgba(255, 0, 0, 0);
+  backdrop-filter: blur(10px);
 }
 .border{
   border: 1px solid skyblue;
-  box-shadow: 2px 2px 2px rgb(253, 64, 64);
+  box-shadow: 1px 1px 2px rgb(253, 64, 64);
 }
 .req{
   animation:err 500ms linear infinite both;  
@@ -170,6 +184,7 @@ option{
 .card{
   display: flex;
   height: 81%;
+  max-height: fit-content;
   justify-content: center;
   gap: 10%;
   align-items: flex-start;
@@ -196,18 +211,19 @@ option{
 }
 .profile img{
   width: 50%;
-  animation: bcolor 700ms ease infinite alternate  ;    
+  max-width: 200px;
+  min-width: 75px;
+   
 }
 .profile h2{
   font-family:"Press Start 2P" ;
   font-size: 3vw;
   color: rgb(247, 212, 146);
-  text-shadow: 4px 4px 1px skyblue;
-  animation: color 700ms ease infinite alternate  ;
+
 }
 @keyframes color {
-  from {text-shadow: 4px 4px 1px rgb(253, 64, 64);}
-  to {text-shadow: 4px 4px 1px rgb(57, 193, 247);}
+  from {text-shadow: 1px 1px 1px rgb(253, 64, 64);}
+  to {text-shadow: 1px 1px 1px rgb(57, 193, 247);}
   
 }
 @keyframes bcolor {
@@ -267,7 +283,7 @@ li{
   width: 100%;
   text-transform: none;
 }
-.list{
+.mainlist{
   width: 90%;
   margin: auto;
   margin-top: 10px;
@@ -278,14 +294,14 @@ li{
   backdrop-filter: blur(10px) brightness(60%);
   border-radius: 15px;
 }
-.item{
+.list{
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
-#listImg{
+#list img{
   max-height: 100px;
 }
 

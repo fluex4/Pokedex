@@ -12,23 +12,16 @@
         <div class="nav"><h1 class="title">Pokedex </h1><div id="iconn"></div></div>
         <div class="search">    
             <div class="search-bar  " id ="bar">
-                <input type="text" class="input " id="inpt">
-                <!-- <select name="type" id="select">
-                    <option value="pokemon">Pokemon</option>
-                    <option value="berry">Berries</option>
-                    <option value="item">Items</option>
-                    <option value="locations">Locations</option>
-                    <option value="move">Moves</option>
-                </select>  -->
-                <button style=" height: 80%; width: 20%; " onclick="get()">search</button>
-                <button style=" height: 80%;  " id="btn">
-                    <img src="pikachu-running.gif" alt="Get" style="height: 100%; cursor: pointer; " title="list" onclick="displayList()">
-                </button>
+                <input type="text" class="input " id="inpt" placeholder="Pokemon name">
+                <select name="type" id="select" onchange="displayList()">
+                    
+                </select> 
+                <button  onclick="get()" id="btn2">search</button>
             </div>
         </div>   
         <h2 class="hide " id="error"></h2>    
     <div class="card hide">
-        <div class="profile" onclick="changeImg()"><img src="#" alt="" id="pfp"><h2 id="name">Gengar</h2><h4 id="imgtype"></h4></div>
+        <div class="profile" onclick="changeImg()"><img src="#" alt="" id="pfp"><h4 id="imgtype"></h4><h2 id="name">Gengar</h2></div>
         <div id="stats"> 
             <div id="detail">
                 <h3 class="heading">Stats:</h3>Type:
@@ -50,31 +43,8 @@
             </div>
         </div>
     </div>
-    <div class="list " id="list">
-        <div class="item " id="listItem">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" id="listImg">
-            <label id="label">Gengar</label>
-        </div>
-        <div class="item " id="listItem">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" id="listImg">
-            <label id="label">Gengar</label>
-        </div>
-        <div class="item " id="listItem">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" id="listImg">
-            <label id="label">Gengar</label>
-        </div>
-        <div class="item " id="listItem">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" id="listImg">
-            <label id="label">Gengar</label>
-        </div>
-        <div class="item " id="listItem">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" id="listImg">
-            <label id="label">Gengar</label>
-        </div>
-        <div class="item " id="listItem">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" id="listImg">
-            <label id="label">Gengar</label>
-        </div>
+    <div class="mainlist " id="mainlist">
+        
         
     </div>
     <script src="app.js"></script>
