@@ -8,7 +8,7 @@ const list = document.getElementById("mainlist");
 let imgs;
 
 let z =document.getElementById("select");
-fetch("https://pokeapi.co/api/v2/type/?count=20")
+fetch("https://pokeapi.co/api/v2/type/?limit=18")
 .then(response=>{
     return response.json();
  })

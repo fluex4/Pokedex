@@ -21,6 +21,7 @@ body{
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center 10px;
+  padding-bottom: 20px;
 }
 .nav{
   height: 15%;
@@ -120,7 +121,7 @@ button{
   background-repeat: no-repeat;
   background-size: contain;
   text-align: left;
-  padding-left: 4px;
+  padding-left  : 4px;
   color: black        ;
 }
 option{
@@ -179,29 +180,33 @@ option{
   100%{
       translate: 0px;
       border: 2px solid red;
+    }
   }
+  .card{
+    display: flex;
+    height: 81%;
+    width: 100%;
+    max-height: fit-content;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 3%;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.card{
-  display: flex;
-  height: 81%;
-  max-height: fit-content;
-  justify-content: center;
-  gap: 10%;
-  align-items: flex-start;
-  padding-top: 3%;
-  flex-wrap: wrap;
- 
+.profile h2{
+  font-family:"Press Start 2P" ;
+  font-size: 2rem;
+  color: rgb(247, 212, 146);
 
 }
 .profile{
   backdrop-filter: blur(10px) brightness(60%);
-  width: fit-content;
+  width: 25%;
   padding: 3%;
-  aspect-ratio: 3/2;
   min-height: 200px;
-  max-height: 500px;
-  min-width: 200px;
-  border-radius: 10px;
+  max-height: 550px;
+  min-width: 300px;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,12 +220,6 @@ option{
   min-width: 75px;
    
 }
-.profile h2{
-  font-family:"Press Start 2P" ;
-  font-size: 3vw;
-  color: rgb(247, 212, 146);
-
-}
 @keyframes color {
   from {text-shadow: 1px 1px 1px rgb(253, 64, 64);}
   to {text-shadow: 1px 1px 1px rgb(57, 193, 247);}
@@ -233,10 +232,8 @@ option{
 }
 #stats{
   backdrop-filter: blur(10px) brightness(60%);
-  width: 30vw;
-  font-size: 1.5vw;
-  min-width: 300px;
-  height: max-content;
+  width: 300px;
+  
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -247,22 +244,23 @@ option{
 }
 #divide{
   margin: auto;
-  width: 80%;
+  width: 90%;
   border-bottom: 1px solid white;
 }
 #detail{
   margin: 3% 0;
   margin-left: 12%;
   text-align: left;
+  font-size: 0.7rem;
 }
 #ability,#moves{
-  font-size: .7vw;
+  font-size: 1.2rem;
   margin: 3% 4% 3% 12%;
   margin-left: 12%;
   text-align: left;
 }
 .heading{
-  font-size: 1.8vw;
+  font-size: 1.8rem;
   animation: color 1s infinite alternate;
 }
 ul{
@@ -270,6 +268,7 @@ ul{
 }
 li{
   display: inline;
+  font-size: 0.7rem;
 }
 #type{
   font-weight: 700;
@@ -293,6 +292,9 @@ li{
   flex-wrap: wrap;
   backdrop-filter: blur(10px) brightness(60%);
   border-radius: 15px;
+  padding: 15px;
+  gap:10px;
+  border: 1px solid white;
 }
 .list{
   display: flex;
@@ -300,11 +302,18 @@ li{
   text-align: center;
   align-items: center;
   justify-content: center;
+  word-wrap: break-word;
+  border: 1px solid white;
+  border-radius: 9px;
 }
-#list img{
+.list  img{
   max-height: 100px;
+  max-width: 100px;
 }
-
+.list p{
+  font-size: .9rem;
+  padding: 0 9px;
+}
 
 .grass{
   color:lightgreen;
